@@ -1,0 +1,23 @@
+----- Manual RAII Smart Pointer -----
+Resource acquired
+Resource is being used
+Resource released
+Manual smart pointer destroyed
+----- unique_ptr -----
+Resource acquired
+Resource is being used
+Resource released
+----- shared_ptr -----
+Resource acquired
+Resource is being used
+Shared Pointer Count: 2
+
+Resource released
+
+Program completed successfully.
+Valgrind Command
+First, compile the program with debugging information:
+g++ -g smart_pointer.cpp -o smart_pointer
+Then run Valgrind:
+valgrind --leak-check=full ./smart_pointer
+Sample Valgrind Result
